@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1pllsmgwhfjm"]
+
+[ext_resource type="Script" uid="uid://br66ieghoxugg" path="res://Debugger.gd" id="1_2bajt"]
+
+[node name="Debugger" type="CanvasLayer"]
+script = ExtResource("1_2bajt")
+
+[node name="PlayerStates" type="Label" parent="."]
+offset_left = 920.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 490.0
+text = "Enemy States:"

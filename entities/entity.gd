@@ -10,14 +10,13 @@ enum Teams{
 }
 
 
-@onready var anims: Node2D = get_node("anims")
-
+@onready var state: StateMachine = StateMachine.new(self)
 @export var speed: int = 200
 @export var max_hp: int = -1
 @export var team: Teams = Teams.NEUTRAL
-var hp: int
+var hp: int = max_hp
 
-var state: StateMachine = StateMachine.new(self)
+
 
 
 func _init(team: Teams) -> void:
@@ -34,10 +33,14 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta):	
-	if (velocity.x > 0 and anims.scale.x < 0) or (velocity.x < 0 and anims.scale.x > 0):
-		anims.scale.x *= -1
+	if (velocity.x > 0 and $anims.scale.x < 0) or (velocity.x < 0 and $anims.scale.x > 0):
+		$anims.scale.x *= -1
+	state.check()
 	main(delta)
 
 
 func main(delta: float):
 	pass
+
+func get_anims() -> AnimatedSprite2D:
+	return $anims

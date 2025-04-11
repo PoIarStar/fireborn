@@ -14,14 +14,14 @@ enum States{
 }
 
 const movable_states_count: int = 4
-var state: States
+var state: States = States.IDLE
 
 func _init(entity: Entity):
 	self.entity = entity
-	self.anims = entity.anims
+	self.anims = entity.get_anims()
 
 
-func _process(delta: float) -> void:
+func check() -> void:
 	if entity.velocity == Vector2.ZERO:
 		stay()
 	elif state >= movable_states_count:
@@ -34,9 +34,9 @@ func _process(delta: float) -> void:
 func play_anim():
 	match state:
 		States.IDLE:
-			anims.play("idle")
+			pass
 		States.MOVE:
-			anims.play("")
+			pass
 		pass # дописать названия остальных анимок, когда будут готовы
 
 
