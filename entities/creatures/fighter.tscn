@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn4wihubminro"]
-
-[ext_resource type="PackedScene" uid="uid://cnmdhe1b5g437" path="res://entities/creatures/creature.tscn" id="1_h5upm"]
-[ext_resource type="Script" uid="uid://ckjwtwg4gobx4" path="res://entities/creatures/fighter.gd" id="2_5ky5n"]
-
-[node name="Fighter" instance=ExtResource("1_h5upm")]
-script = ExtResource("2_5ky5n")

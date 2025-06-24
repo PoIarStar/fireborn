@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ldtwdn1cwnpc"]
 
-[ext_resource type="Script" uid="uid://letudmkl0w0b" path="res://collections/spell_book.gd" id="1_pcc33"]
+[ext_resource type="Script" uid="uid://letudmkl0w0b" path="res://core/collections/spell_book.gd" id="1_pcc33"]
 
 [node name="SpellBook" type="Node"]
 script = ExtResource("1_pcc33")

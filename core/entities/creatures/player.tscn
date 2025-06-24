@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1v0fvl2xqbws"]
+
+[ext_resource type="PackedScene" uid="uid://bungu3q7f1t5x" path="res://core/entities/creatures/character.tscn" id="1_g0u1p"]
+[ext_resource type="Script" uid="uid://nqj2cdr5dvlv" path="res://core/entities/creatures/player.gd" id="2_lr2p1"]
+
+[node name="Player" instance=ExtResource("1_g0u1p")]
+script = ExtResource("2_lr2p1")
+
+[node name="Camera2D" type="Camera2D" parent="." index="3"]

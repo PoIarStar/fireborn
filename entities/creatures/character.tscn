@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bungu3q7f1t5x"]
-
-[ext_resource type="PackedScene" uid="uid://d3wfmfgmyqnpy" path="res://entities/creatures/mage.tscn" id="1_524la"]
-[ext_resource type="Script" uid="uid://ep1edenk6rml" path="res://entities/creatures/character.gd" id="2_1sa8s"]
-
-[node name="Character" instance=ExtResource("1_524la")]
-script = ExtResource("2_1sa8s")

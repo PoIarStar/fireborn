@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnmdhe1b5g437"]
-
-[ext_resource type="PackedScene" uid="uid://bdvugkqdpnxc8" path="res://entities/Entity.tscn" id="1_3o8f6"]
-[ext_resource type="Script" uid="uid://c55kfka8lj1i7" path="res://entities/creatures/creature.gd" id="2_bhed1"]
-
-[node name="Creature" instance=ExtResource("1_3o8f6")]
-script = ExtResource("2_bhed1")
-armor = 0

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5p7yquqkd1ef"]
 
-[ext_resource type="PackedScene" uid="uid://d1v0fvl2xqbws" path="res://entities/creatures/player.tscn" id="1_a53fa"]
-[ext_resource type="PackedScene" uid="uid://bungu3q7f1t5x" path="res://entities/creatures/character.tscn" id="2_m3wy8"]
-[ext_resource type="PackedScene" uid="uid://c1pllsmgwhfjm" path="res://debugger.tscn" id="3_56njm"]
+[ext_resource type="PackedScene" uid="uid://d1v0fvl2xqbws" path="res://core/entities/creatures/player.tscn" id="1_a53fa"]
+[ext_resource type="PackedScene" uid="uid://bungu3q7f1t5x" path="res://core/entities/creatures/character.tscn" id="2_m3wy8"]
+[ext_resource type="PackedScene" uid="uid://c1pllsmgwhfjm" path="res://core/debug/debugger.tscn" id="3_56njm"]
 
 [node name="BasicLevel" type="Node2D"]
 
