@@ -6,3 +6,4 @@
 [node name="Creature" instance=ExtResource("1_3o8f6")]
 script = ExtResource("2_bhed1")
 armor = 0
+max_hp = -1

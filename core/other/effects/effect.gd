@@ -26,6 +26,9 @@ func removing():
 	pass
 
 
+func on_impact(impact: Impact):
+	pass
+
 
 func _on_lifetime_timer_timeout() -> void:
 	removing()

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://hl0bnuid2ch7"]
+
+[ext_resource type="PackedScene" uid="uid://lwi2vs03i7wv" path="res://core/entities/attacks/attack_entity.tscn" id="1_3rqkh"]
+[ext_resource type="Script" uid="uid://dstfcfl8vef6r" path="res://core/entities/attacks/arrow_attack.gd" id="2_im5pp"]
+
+[node name="ArrowAttack" instance=ExtResource("1_3rqkh")]
+script = ExtResource("2_im5pp")
