@@ -14,6 +14,7 @@ enum Teams{
 @onready var state: StateMachine = StateMachine.new(self)
 @export var speed: int = 200
 @export var team: Teams = Teams.NEUTRAL
+var level
 
 
 func _init(team: Teams) -> void:
@@ -33,6 +34,10 @@ func _process(delta):
 
 func main(delta: float):
 	pass
+
+
+func set_team(team: Teams):
+	self.team = team
 
 
 func get_anims() -> AnimatedSprite2D:

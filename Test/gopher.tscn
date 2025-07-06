@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8ppibanuhdv"]
+
+[ext_resource type="PackedScene" uid="uid://cnmdhe1b5g437" path="res://core/entities/creatures/creature.tscn" id="1_3t00j"]
+[ext_resource type="Script" uid="uid://c6dfhcc5necb3" path="res://Test/gopher.gd" id="2_h4opi"]
+
+[node name="Gopher" instance=ExtResource("1_3t00j")]
+script = ExtResource("2_h4opi")

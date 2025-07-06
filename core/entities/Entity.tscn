@@ -18,6 +18,7 @@ animations = [{
 }]
 
 [node name="Entity" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_ep4xq")
 
 [node name="InteractionRange" type="Area2D" parent="."]

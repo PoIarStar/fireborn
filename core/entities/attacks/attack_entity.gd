@@ -6,12 +6,14 @@ signal creature_entered(creature: Creature)
 
 
 var impact: Impact
+var lifetime: int
 
 
-func _init(attacker: Player, team: Teams, lifetime: int) -> void:
+func _init(attacker: Player, team: Teams, direction: Vector2) -> void:
 	super._init(team)
 	self.attacker = attacker
-	self.lifetime = lifetime
+	self.direction = direction
+	rotate(direction.angle())
 	$LifetimeTimer.start(lifetime)
 
 

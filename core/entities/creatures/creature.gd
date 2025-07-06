@@ -6,6 +6,8 @@ class_name Creature
 @export var armor: int = 0
 @export var max_hp: int = -1
 var hp: int = max_hp
+
+var inventory: Inventory = Inventory.new()
 var effects = []
 
 
@@ -21,6 +23,5 @@ func handle_impact(impact: Impact):
 		hp -= impact.damage
 		if hp <= 0:
 			state.death()
-	
+
 	effects.append_array(impact.effects)
-		

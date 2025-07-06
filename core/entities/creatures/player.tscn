@@ -4,6 +4,11 @@
 [ext_resource type="Script" uid="uid://nqj2cdr5dvlv" path="res://core/entities/creatures/player.gd" id="2_lr2p1"]
 
 [node name="Player" instance=ExtResource("1_g0u1p")]
+motion_mode = 1
+platform_floor_layers = 4294967041
+platform_wall_layers = 2
 script = ExtResource("2_lr2p1")
+speed = 2000
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
+zoom = Vector2(0.5, 0.5)

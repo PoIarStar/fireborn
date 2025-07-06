@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxf6t0hyb23xy"]
+
+[ext_resource type="PackedScene" uid="uid://d1v0fvl2xqbws" path="res://core/entities/creatures/player.tscn" id="1_mdiga"]
+[ext_resource type="Script" uid="uid://obnebat4tu7" path="res://Test/archer.gd" id="2_37754"]
+
+[node name="Archer" instance=ExtResource("1_mdiga")]
+script = ExtResource("2_37754")

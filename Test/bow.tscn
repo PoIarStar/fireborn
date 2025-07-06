@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://b38icm4sj6yn2"]
+
+[ext_resource type="PackedScene" uid="uid://bipc7x24lac4s" path="res://core/other/items/weapons/weapon.tscn" id="1_116t7"]
+[ext_resource type="Script" uid="uid://4ovl8v7qe4qu" path="res://Test/bow.gd" id="2_spj7q"]
+[ext_resource type="PackedScene" uid="uid://dllqptvbpruut" path="res://Test/arrow.tscn" id="3_k1xn3"]
+
+[node name="Bow" instance=ExtResource("1_116t7")]
+script = ExtResource("2_spj7q")
+
+[node name="Arrow" parent="." index="1" instance=ExtResource("3_k1xn3")]
+collision_layer = 1
+collision_mask = 1

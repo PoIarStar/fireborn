@@ -4,7 +4,10 @@ class_name Player
 
 func _init() -> void:
 	super._init(Teams.PLAYER)
+	speed = 200
 
 
 func main(delta: float):
-	velocity = Input.get_vector("ui_right", "ui_left", "ui_down", "ui_up") * speed
+	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * speed
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		attack(get_global_mouse_position() - self.global_position)

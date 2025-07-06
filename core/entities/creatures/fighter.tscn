@@ -4,4 +4,5 @@
 [ext_resource type="Script" uid="uid://ckjwtwg4gobx4" path="res://core/entities/creatures/fighter.gd" id="2_5ky5n"]
 
 [node name="Fighter" instance=ExtResource("1_h5upm")]
+motion_mode = 0
 script = ExtResource("2_5ky5n")
