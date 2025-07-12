@@ -14,7 +14,7 @@ func _init() -> void:
 	var arr = [Vector2(100, 100), Vector2(-200, -100)]
 	
 	for i in arr:
-		var creat = preload("res://Test/gopher.tscn").instantiate()
+		var creat: Creature = preload("res://Test/gopher.tscn").instantiate()
 		creat.set_team(Entity.Teams.NEUTRAL)
 		creat.position = position + i
 		creat.level = self
@@ -22,3 +22,10 @@ func _init() -> void:
 	
 	for i in get_children():
 		print(i)
+
+
+func spawn_attack(attack_scene: PackedScene, attacker: Fighter, direction: Vector2):
+	var attack: AttackEntity = attack_scene.instantiate()
+	attack.position = attacker.position
+	attack.activate(attacker, attacker.team, direction.normalized())
+	add_child(attack)

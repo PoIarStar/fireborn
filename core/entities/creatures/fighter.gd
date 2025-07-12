@@ -9,8 +9,5 @@ func _init(team: Teams) -> void:
 	
 
 func attack(target: Vector2):
-	print(target)
-	var attack = inventory.active_cell.attack.instantiate()
-	attack.position = self.position
-	attack.velocity = 1000 * target.normalized()
-	self.level.add_child(attack)
+	self.level.spawn_attack(self.inventory.active_cell.attack, self, target.normalized())
+	

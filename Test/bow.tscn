@@ -6,6 +6,7 @@
 
 [node name="Bow" instance=ExtResource("1_116t7")]
 script = ExtResource("2_spj7q")
+attack = ExtResource("3_k1xn3")
 
 [node name="Arrow" parent="." index="1" instance=ExtResource("3_k1xn3")]
 collision_layer = 1

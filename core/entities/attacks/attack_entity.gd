@@ -7,13 +7,20 @@ signal creature_entered(creature: Creature)
 
 var impact: Impact
 var lifetime: int
+var attacker: Fighter
+var direction: Vector2
 
 
-func _init(attacker: Player, team: Teams, direction: Vector2) -> void:
-	super._init(team)
+func _init() -> void:
+	super._init(Teams.NEUTRAL)
+
+
+func activate(attacker: Player, team: Teams, direction: Vector2) -> void:
+	set_team(team)
 	self.attacker = attacker
 	self.direction = direction
 	rotate(direction.angle())
+	velocity = speed * direction
 	$LifetimeTimer.start(lifetime)
 
 
@@ -23,5 +30,4 @@ func _on_lifetime_timer_timeout() -> void:
 
 func _on_interaction_range_body_entered(body: Node2D) -> void:
 	if body is Creature:
-		print(1)
-		#creature_entered(body.)
+		body.handle_impact(impact)

@@ -22,6 +22,7 @@ func handle_impact(impact: Impact):
 	if hp > 0:
 		hp -= impact.damage
 		if hp <= 0:
-			state.death()
+			state.dying()
+			queue_free()
 
 	effects.append_array(impact.effects)

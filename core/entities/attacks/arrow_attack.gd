@@ -2,6 +2,5 @@ extends AttackEntity
 class_name ArrowAttack
 
 
-func _init(attacker: Player, team: Teams, direction: Vector2) -> void:
-	super._init(attacker, team, direction)
-	velocity = direction.normalized() * speed
+func _init() -> void:
+	super._init()

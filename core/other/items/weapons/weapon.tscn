@@ -5,3 +5,4 @@
 
 [node name="Weapon" instance=ExtResource("1_pe788")]
 script = ExtResource("2_sx6ai")
+attack = null

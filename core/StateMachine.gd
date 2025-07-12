@@ -24,8 +24,8 @@ func _init(entity: Entity):
 func check() -> void:
 	if entity.velocity == Vector2.ZERO:
 		stay()
-	elif state >= movable_states_count:
-		entity.velocity = Vector2.ZERO
+	#elif state >= movable_states_count:
+	#	entity.velocity = Vector2.ZERO
 	else:
 		move()
 	play_anim()

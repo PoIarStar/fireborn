@@ -5,3 +5,8 @@
 
 [node name="Arrow" instance=ExtResource("1_0spf3")]
 script = ExtResource("2_ktv4g")
+speed = 600
+
+[node name="InteractionRange" parent="." index="0"]
+collision_layer = 5
+collision_mask = 1
