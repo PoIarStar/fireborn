@@ -30,6 +30,10 @@ func on_impact(impact: Impact):
 	pass
 
 
+func modify_weapon(weapon: Weapon):
+	pass
+
+
 func _on_lifetime_timer_timeout() -> void:
 	removing()
 	queue_free()  # delete object

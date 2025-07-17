@@ -7,7 +7,7 @@
 [node name="Bow" instance=ExtResource("1_116t7")]
 script = ExtResource("2_spj7q")
 attack = ExtResource("3_k1xn3")
-
-[node name="Arrow" parent="." index="1" instance=ExtResource("3_k1xn3")]
-collision_layer = 1
-collision_mask = 1
+damage = 7
+critical_damage = 14
+critical_chance = 0.5
+cooldown = 2

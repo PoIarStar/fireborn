@@ -22,10 +22,3 @@ func _init() -> void:
 	
 	for i in get_children():
 		print(i)
-
-
-func spawn_attack(attack_scene: PackedScene, attacker: Fighter, direction: Vector2):
-	var attack: AttackEntity = attack_scene.instantiate()
-	attack.position = attacker.position
-	attack.activate(attacker, attacker.team, direction.normalized())
-	add_child(attack)
