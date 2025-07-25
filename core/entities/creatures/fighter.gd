@@ -6,11 +6,11 @@ func _init(team: Teams) -> void:
 	super._init(team)
 	
 	
-func can_attack() -> bool:
+func can_attack() -> bool:  ## Возвращает [code]true[/code], если существо может атаковать в данный момент
 	return $WeaponCooldownTimer.is_stopped()
 	
 
-func attack(target: Vector2):
+func attack(target: Vector2):  ## Функция атаки. Применяет все эффекты и бонусы к оружию, после чего создаёт атаку
 	if can_attack():
 		var weapon: Weapon = inventory.active_cell.duplicate()  # чтобы не менять характеристики оружия
 		

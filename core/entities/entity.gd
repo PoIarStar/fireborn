@@ -1,20 +1,22 @@
-extends CharacterBody2D
 class_name Entity
+extends CharacterBody2D
+
+## Базовый класс всех сущностей. Описывает физику и направление анимации. Любое дополнительное поведение должно описываться в функции main()
 
 
-enum Teams{
-	NEUTRAL,
-	LOYAL,
-	PLAYER,
-	ENEMY,
-	SPELL
+enum Teams{  ## Перечисление всех команд
+	NEUTRAL,  ## Нейтральные существа
+	LOYAL,  ## Мирные существа
+	PLAYER,  ## Команда игрока
+	ENEMY,  ## Враждебные существа
+	SPELL,  ## Заклинания
 }
 
 
-@onready var state: StateMachine = StateMachine.new(self)
-@export var speed: int = 200
-@export var team: Teams = Teams.NEUTRAL
-var level
+@onready var state: StateMachine = StateMachine.new(self)  ## Машина состояний
+@export var speed: int = 200  ## Скорость сущности
+@export var team: Teams = Teams.NEUTRAL  ## Команда сущности
+var level  ## Уровень, на котором находится сущность
 
 
 func _init(team: Teams) -> void:
@@ -32,13 +34,13 @@ func _process(delta):
 	main(delta)
 
 
-func main(delta: float):
+func main(delta: float):  ## Функция, задающая поведение сущности
 	pass
 
 
-func set_team(team: Teams):
+func set_team(team: Teams):  ## Сеттер. Устанавливает команду
 	self.team = team
 
 
-func get_anims() -> AnimatedSprite2D:
+func get_anims() -> AnimatedSprite2D:  ## Геттер. Возвращает анимации
 	return $anims

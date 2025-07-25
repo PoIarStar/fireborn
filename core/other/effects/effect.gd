@@ -1,5 +1,5 @@
-extends Node
 class_name Effect
+extends Node
 
 
 var lifetime: int

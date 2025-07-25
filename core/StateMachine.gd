@@ -1,5 +1,6 @@
-extends Node
 class_name StateMachine
+extends Node
+
 
 var entity: Entity
 var anims: AnimatedSprite2D

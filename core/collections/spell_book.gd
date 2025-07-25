@@ -1,5 +1,8 @@
-extends Object
 class_name SpellBook
+extends Object
 
-var active_spell: Spell
-var spells: Array = []
+## Книга заклинаний, массив заклинаний с активной ячейкой
+
+
+var active_spell: Spell  ## Активное заклинание
+var spells: Array[Spell] = []  ## Список заклинаний

@@ -1,5 +1,6 @@
-extends Node
 class_name Impact
+extends Node
+
 
 var damage: int
 var effects: Array[Effect]

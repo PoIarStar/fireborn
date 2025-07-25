@@ -1,26 +1,25 @@
-extends Entity
 class_name AttackEntity
+extends Entity
 
 
 signal creature_entered(creature: Creature)
 
 
-var impact: Impact
-var lifetime: int
-var attacker: Fighter
-var direction: Vector2
+var impact: Impact  ## Воздействие атаки
+var lifetime: int  ## Продолжительность существования атаки
+var attacker: Fighter  ## Атакующий - боец, создатель атаки
+var direction: Vector2  ## Направление атаки
 
 
 func _init() -> void:
 	super._init(Teams.NEUTRAL)
 
 
-func activate(attacker: Player, direction: Vector2) -> void:
+func activate(attacker: Player, direction: Vector2) -> void:  ## Активирует атаку: задаёт направление и запускает таймер существования
 	set_team(attacker.team)
 	self.attacker = attacker
 	self.direction = direction
 	rotate(direction.angle())
-	velocity = speed * direction
 	$LifetimeTimer.start(lifetime)
 
 
