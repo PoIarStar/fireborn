@@ -1,5 +1,7 @@
-extends Creature
 class_name Fighter
+extends Creature
+
+## Боец. Способен сражаться
 
 
 func _init(team: Teams) -> void:

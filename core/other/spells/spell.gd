@@ -1,6 +1,8 @@
 class_name Spell
 extends Node2D
 
+## Заклинание
+
 
 enum Types{  ## Перечисление стихий
 	Creation,  ## Созидание

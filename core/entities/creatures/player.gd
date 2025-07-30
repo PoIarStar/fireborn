@@ -1,6 +1,8 @@
 extends Character
 class_name Player
 
+## Игрок. Управляется человеком
+
 
 func _init() -> void:
 	super._init(Teams.PLAYER)

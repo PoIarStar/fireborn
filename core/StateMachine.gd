@@ -1,6 +1,8 @@
 class_name StateMachine
 extends Node
 
+## Машина состояний. Отвечает за переключение анимаций и слоёв видимости
+
 
 var entity: Entity
 var anims: AnimatedSprite2D

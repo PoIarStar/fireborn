@@ -1,5 +1,7 @@
-extends Fighter
 class_name Mage
+extends Fighter
+
+## Волшебник. Имеет запас маны и книгу заклинаний
 
 
 @export var max_mana: int = 0  ## Максимальное количество очков маны
