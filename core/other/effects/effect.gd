@@ -11,9 +11,9 @@ var repeat_time: int  ## время, через которое повторяе�
 var next_repeat: int  ## момент следующего выполнения основного действия
 
 
-func _init(lifetime: int, repeat_time: int) -> void:
+func _init(lifetime: int, repeat_time: int = 0) -> void:
 	self.lifetime = lifetime
-	self.repeat_time = repeat_time
+	self.repeat_time = repeat_time if repeat_time != 0 else lifetime + 1
 	applying()
 	next_repeat = repeat_time
 

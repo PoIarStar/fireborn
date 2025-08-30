@@ -7,3 +7,8 @@
 script = ExtResource("1_jxqax")
 
 [node name="Debugger" parent="." instance=ExtResource("2_x83mk")]
+
+[node name="Tick" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Tick" to="." method="_on_tick_timeout"]

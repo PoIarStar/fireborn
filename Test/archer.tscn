@@ -5,3 +5,4 @@
 
 [node name="Archer" instance=ExtResource("1_mdiga")]
 script = ExtResource("2_37754")
+max_hp = 20

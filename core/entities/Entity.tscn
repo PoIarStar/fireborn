@@ -18,8 +18,10 @@ animations = [{
 }]
 
 [node name="Entity" type="CharacterBody2D"]
+input_pickable = true
 motion_mode = 1
 script = ExtResource("1_ep4xq")
+metadata/_edit_group_ = true
 
 [node name="InteractionRange" type="Area2D" parent="."]
 
@@ -33,3 +35,6 @@ shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="anims" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sweqy")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

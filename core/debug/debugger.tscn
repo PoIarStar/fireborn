@@ -3,11 +3,17 @@
 [ext_resource type="Script" uid="uid://br66ieghoxugg" path="res://core/debug/Debugger.gd" id="1_2bajt"]
 
 [node name="Debugger" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_2bajt")
 
-[node name="PlayerStates" type="Label" parent="."]
+[node name="GlobalStates" type="Label" parent="."]
 offset_left = 920.0
 offset_top = 1.0
 offset_right = 1153.0
 offset_bottom = 490.0
-text = "Enemy States:"
+text = "Debug"
+
+[node name="EntityStates" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Entity"

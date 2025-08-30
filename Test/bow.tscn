@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bipc7x24lac4s" path="res://core/other/items/weapons/weapon.tscn" id="1_116t7"]
 [ext_resource type="Script" uid="uid://4ovl8v7qe4qu" path="res://Test/bow.gd" id="2_spj7q"]
-[ext_resource type="PackedScene" uid="uid://dllqptvbpruut" path="res://Test/arrow.tscn" id="3_k1xn3"]
+[ext_resource type="PackedScene" uid="uid://dyrjk4emulm0" path="res://Test/fired_arrow.tscn" id="3_k1xn3"]
 
 [node name="Bow" instance=ExtResource("1_116t7")]
 script = ExtResource("2_spj7q")

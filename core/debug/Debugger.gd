@@ -1,22 +1,28 @@
 extends CanvasLayer
 
 
-var player: Player
+var level: Level
 # Called when the node enters the scene tree for the first time.
-
-func _init(player: Player):
-	self.player = player
-
-
-func _ready():
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var text = 'Player states: ' + player.name + '\nHealth: ' + str(player.hp) + '\nTeam: ' + str(player.team) + '\nActive weapon: ' + str(player.inventory.active_cell) + '\nState: ' + str(player.state.state)
-	text += "\nLocal pos: " + str(player.position) + "\nGlobal pos: " + str(player.global_position)
-	text += "\nVelocity: " + str(player.velocity)
+	if Input.is_action_just_pressed("ui_debugger"):
+		visible = not visible
 	
-	$PlayerStates.text = text
-	$PlayerStates.show()
+	$GlobalStates.text = 'Global time: ' + str(level.global_time)
+	
+	if not level.cursor:
+		$EntityStates.text = ""
+	elif level.cursor is Creature:
+		$EntityStates.text = level.cursor.name + \
+		"\nHealth: " + str(level.cursor.hp) + \
+		"\nTeam: " + str(level.cursor.team) + \
+		"\nState: " + str(level.cursor.state.state) + \
+		"\nEffects: " + str(level.cursor.effects)
+	elif level.cursor is Entity:
+		$EntityStates.text = level.cursor.name + \
+		"\nTeam: " + str(level.cursor.team) + \
+		"\nState: " + str(level.cursor.state.state)
+	else:
+		print("Unknown ERROR. We have found it")

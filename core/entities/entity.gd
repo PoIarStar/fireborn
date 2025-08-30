@@ -44,3 +44,11 @@ func set_team(team: Teams):  ## Сеттер. Устанавливает ком�
 
 func get_anims() -> AnimatedSprite2D:  ## Геттер. Возвращает анимации
 	return $anims
+
+
+func _on_mouse_entered() -> void:
+	level.cursor = self
+
+
+func _on_mouse_exited() -> void:
+	level.cursor = null
