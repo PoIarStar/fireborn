@@ -6,7 +6,7 @@
 
 [node name="Bow" instance=ExtResource("1_116t7")]
 script = ExtResource("2_spj7q")
-attack = ExtResource("3_k1xn3")
+attack_scene = ExtResource("3_k1xn3")
 damage = 7
 critical_damage = 14
 critical_chance = 0.5

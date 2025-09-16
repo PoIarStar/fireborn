@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu0fw2u6xdfum"]
+
+[ext_resource type="PackedScene" uid="uid://cyfm0hx2lvmip" path="res://core/other/effects/repeating_effect.tscn" id="1_3y6ai"]
+[ext_resource type="Script" uid="uid://ddk8kk81m8uo4" path="res://Test/burning.gd" id="2_7aymr"]
+
+[node name="Burning" instance=ExtResource("1_3y6ai")]
+script = ExtResource("2_7aymr")

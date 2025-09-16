@@ -2,5 +2,5 @@ extends Creature
 
 
 func _init():
-	super._init(Teams.NEUTRAL)
+	team = Teams.NEUTRAL
 	self.hp = 20

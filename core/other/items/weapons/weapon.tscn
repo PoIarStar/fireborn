@@ -5,7 +5,7 @@
 
 [node name="Weapon" instance=ExtResource("1_pe788")]
 script = ExtResource("2_sx6ai")
-attack = null
+attack_scene = null
 damage = 0
 critical_damage = 0
 critical_chance = 0.0

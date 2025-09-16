@@ -19,11 +19,7 @@ enum Teams{  ## Перечисление всех команд
 var level  ## Уровень, на котором находится сущность
 
 
-func _init(team: Teams) -> void:
-	self.team = team
-
-
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide()
 
 
@@ -34,7 +30,7 @@ func _process(delta):
 	main(delta)
 
 
-func main(delta: float):  ## Функция, задающая поведение сущности
+func main(_delta: float):  ## Функция, задающая поведение сущности
 	pass
 
 

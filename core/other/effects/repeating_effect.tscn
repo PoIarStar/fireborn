@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyfm0hx2lvmip"]
+
+[ext_resource type="PackedScene" uid="uid://cc1vi0a8nwvjb" path="res://core/other/effects/effect.tscn" id="1_nj62e"]
+[ext_resource type="Script" uid="uid://buo2y2opvexrt" path="res://core/other/effects/repeating_effect.gd" id="2_rg1v7"]
+
+[node name="RepeatingEffect" instance=ExtResource("1_nj62e")]
+script = ExtResource("2_rg1v7")
+
+[node name="RepeatTimer" type="Timer" parent="." index="1"]
+
+[connection signal="timeout" from="RepeatTimer" to="." method="_on_repeat_timer_timeout"]

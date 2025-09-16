@@ -5,7 +5,7 @@ class_name Player
 
 
 func _init() -> void:
-	super._init(Teams.PLAYER)
+	team = Teams.PLAYER
 	speed = 200
 
 

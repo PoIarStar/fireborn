@@ -1,38 +1,31 @@
 class_name Effect
-extends Object
+extends Node
 
 ## Эффект - накладывается на существо и оказывает определённое влияние на его характеристики
 
+enum OverlayTypes {
+	STACKABLE,  ## перекрываемый: эффекты накладываются поверх эффектов своего типа
+	REPLACEABLE,  ## заменяемый: старый эффект заменяется новым
+	SPECIAL,  ## специальный: особое поведение, задаётся вручную
+}
 
-var creature: Creature
-var age: float = 0  ## возраст эффекта в секундах
-var lifetime: int  ## время до истечения эффекта
-var repeat_time: int  ## время, через которое повторяется основное действие эффекта. Например, отравление наносит урон каждую секунду
-var next_repeat: int  ## момент следующего выполнения основного действия
 
+var lifetime: int
+var overlay_type: OverlayTypes = OverlayTypes.REPLACEABLE  ## тип перекрытия
+var creature: Creature  ## существо, на которое наложен эффект
 
-func _init(lifetime: int, repeat_time: int = 0) -> void:
+#var negative_effects: Array[Effect]
+
+func set_lifetime(lifetime: int = 1):
 	self.lifetime = lifetime
-	self.repeat_time = repeat_time if repeat_time != 0 else lifetime + 1
+
+
+func _ready() -> void:
 	applying()
-	next_repeat = repeat_time
-
-
-func _process(delta: float) -> void:
-	age += delta
-	if age >= lifetime:
-		removing()
-		free()
-	elif age >= next_repeat:
-		next_repeat += repeat_time
-		process()
+	$LifetimeTimer.start(lifetime)
 
 
 func applying():  ## действие эффекта при наложении
-	pass
-	
-	
-func process():  ## основное действие эффекта
 	pass
 
 
@@ -46,3 +39,8 @@ func on_impact(impact: Impact):  ## влияние эффекта на возд�
 
 func modify_weapon(weapon: Weapon):  ## влияние на оружие при атаке
 	pass
+
+
+func _on_lifetime_timer_timeout() -> void:
+	removing()
+	queue_free()

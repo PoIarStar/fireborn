@@ -19,7 +19,7 @@ func _process(delta):
 		"\nHealth: " + str(level.cursor.hp) + \
 		"\nTeam: " + str(level.cursor.team) + \
 		"\nState: " + str(level.cursor.state.state) + \
-		"\nEffects: " + str(level.cursor.effects)
+		"\nEffects: " + str(level.cursor.find_child("Effects").get_children())
 	elif level.cursor is Entity:
 		$EntityStates.text = level.cursor.name + \
 		"\nTeam: " + str(level.cursor.team) + \

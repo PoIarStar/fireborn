@@ -7,3 +7,5 @@
 script = ExtResource("2_bhed1")
 armor = 0
 max_hp = -1
+
+[node name="Effects" type="Node" parent="." index="3"]

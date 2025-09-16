@@ -12,6 +12,7 @@ func _init() -> void:
 	self.player.position = global_position
 	player.level = self
 	add_child(self.player)
+	player.team = Entity.Teams.PLAYER
 	
 	
 	var arr = [Vector2(100, 100), Vector2(-200, -100)]

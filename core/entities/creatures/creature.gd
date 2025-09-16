@@ -12,12 +12,8 @@ var inventory: Inventory = Inventory.new()  ## Инвентарь
 var effects = []  ## Список эффектов
 
 
-func _init(team: Teams) -> void:
-	super._init(team)
-
-
 func handle_impact(impact: Impact):  ## Обработка эффектов
-	for effect in effects:
+	for effect in $Effects.get_children():
 		effect.on_impact(impact)
 	
 	if hp > 0:
@@ -26,4 +22,5 @@ func handle_impact(impact: Impact):  ## Обработка эффектов
 			state.dying()
 			queue_free()
 
-	effects.append_array(impact.effects)
+	for effect in impact.effects:
+		$Effects.add_child(effect)

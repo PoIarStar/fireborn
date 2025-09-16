@@ -17,7 +17,7 @@ enum Types{  ## Типы оружия
 }
 
 
-@export var attack: PackedScene  ## Атака оружия. Сцена должна иметь тип [AttackEntity].
+@export var attack_scene: PackedScene  ## Сцена атаки оружия. Сцена должна иметь тип [AttackEntity].
 
 @export var damage: int  ## Наносимый оружием урон
 @export var critical_damage: int  ## Критический урон
@@ -26,6 +26,6 @@ enum Types{  ## Типы оружия
 
 
 func get_attack() -> AttackEntity:  ## Возвращает инстанцированную атаку с заданным воздействием
-	var attack: AttackEntity = attack.instantiate()
+	var attack: AttackEntity = attack_scene.instantiate()
 	attack.impact.damage = critical_damage if Funcs.outcome(critical_chance) else damage
 	return attack

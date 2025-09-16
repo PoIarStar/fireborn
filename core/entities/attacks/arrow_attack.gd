@@ -2,10 +2,6 @@ class_name ArrowAttack
 extends AttackEntity
 
 
-func _init() -> void:
-	super._init()
-
-
 func activate(attacker: Player, direction: Vector2) -> void:  ## Активирует атаку: задаёт направление, скорость и запускает таймер существования
 	set_team(attacker.team)
 	self.attacker = attacker

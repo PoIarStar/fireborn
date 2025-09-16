@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyrjk4emulm0"]
+[gd_scene load_steps=4 format=3 uid="uid://dyrjk4emulm0"]
 
 [ext_resource type="PackedScene" uid="uid://dllqptvbpruut" path="res://Test/arrow.tscn" id="1_daike"]
 [ext_resource type="Script" uid="uid://cd6ikgfxonvf8" path="res://fired_arrow.gd" id="2_q7yhn"]
+[ext_resource type="PackedScene" uid="uid://cu0fw2u6xdfum" path="res://Test/burning.tscn" id="3_q7yhn"]
 
 [node name="FiredArrow" instance=ExtResource("1_daike")]
-input_pickable = false
 script = ExtResource("2_q7yhn")
+burning = ExtResource("3_q7yhn")
 
 [connection signal="mouse_entered" from="InteractionRange" to="." method="_on_interaction_range_mouse_entered"]
