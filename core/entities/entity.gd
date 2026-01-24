@@ -3,6 +3,10 @@ extends CharacterBody2D
 
 ## Базовый класс всех сущностей. Описывает физику и направление анимации. Любое дополнительное поведение должно описываться в функции main()
 
+enum ControlTypes {  ## Тип управления. Отвечает за выбор поведения
+	PLAYER,  ## Игрок. Управление с клавиатуры
+	BOT,  ## Бот. Управление алгоритмом игры
+}
 
 enum Teams{  ## Перечисление всех команд
 	NEUTRAL,  ## Нейтральные существа
@@ -16,7 +20,7 @@ enum Teams{  ## Перечисление всех команд
 @onready var state: StateMachine = StateMachine.new(self)  ## Машина состояний
 @export var speed: int = 200  ## Скорость сущности
 @export var team: Teams = Teams.NEUTRAL  ## Команда сущности
-var level  ## Уровень, на котором находится сущность
+@export var control_type: ControlTypes = ControlTypes.BOT
 
 
 func _physics_process(_delta):
@@ -30,8 +34,19 @@ func _process(delta):
 	main(delta)
 
 
-func main(_delta: float):  ## Функция, задающая поведение сущности
+func behaviour_player() -> void:
+	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").rotated(rotation) * speed
+
+
+func behavior_bot() -> void:
 	pass
+
+
+func main(_delta: float):
+	if control_type == ControlTypes.PLAYER:
+		behaviour_player()
+	else:
+		behavior_bot()
 
 
 func set_team(team: Teams):  ## Сеттер. Устанавливает команду
@@ -43,8 +58,8 @@ func get_anims() -> AnimatedSprite2D:  ## Геттер. Возвращает а�
 
 
 func _on_mouse_entered() -> void:
-	level.cursor = self
+	get_parent().cursor = self
 
 
 func _on_mouse_exited() -> void:
-	level.cursor = null
+	get_parent().cursor = null

@@ -15,7 +15,6 @@ func activate(attacker: Player, direction: Vector2) -> void:  ## Активир�
 	set_team(attacker.team)
 	self.attacker = attacker
 	self.direction = direction
-	self.level = attacker.level
 	rotate(direction.angle())
 	$LifetimeTimer.start(lifetime)
 

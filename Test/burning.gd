@@ -2,6 +2,11 @@ class_name Burning
 extends RepeatingEffect
 
 
+func _ready() -> void:
+	super._ready()
+	print(lifetime)
+
+
 func on_impact(impact: Impact):
 	var replace: bool = false
 	for effect: Effect in impact.effects:
@@ -9,4 +14,7 @@ func on_impact(impact: Impact):
 			replace = true
 			break
 	if replace:
-		free()
+		queue_free()
+
+func repeat():
+	get_parent().get_parent().handle_damage(2)

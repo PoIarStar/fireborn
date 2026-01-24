@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfkfljywwofov"]
+
+[ext_resource type="Script" uid="uid://b6qy1nnpwnmdb" path="res://gui/main_menu.gd" id="1_reecx"]
+[ext_resource type="Texture2D" uid="uid://6ykrj1vhaa6x" path="res://photo_2025-04-12_18-23-17.jpg" id="2_xkvi0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkvi0"]
+font_size = 64
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_reecx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 24.0
+offset_right = 712.0
+offset_bottom = 112.0
+text = "Fireborn"
+label_settings = SubResource("LabelSettings_xkvi0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonPlay" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 160.0
+offset_right = 696.0
+offset_bottom = 216.0
+text = "Играть"
+
+[node name="ButtonEditor" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 256.0
+offset_right = 696.0
+offset_bottom = 312.0
+text = "Редактор карт"
+
+[node name="ButtonExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 352.0
+offset_right = 696.0
+offset_bottom = 408.0
+text = "Выход"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 448.0
+offset_right = 1088.0
+offset_bottom = 576.0
+texture = ExtResource("2_xkvi0")
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]

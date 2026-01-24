@@ -9,18 +9,24 @@ extends Entity
 var hp: int = max_hp  ## Здоровье существа
 
 var inventory: Inventory = Inventory.new()  ## Инвентарь
-var effects = []  ## Список эффектов
 
 
 func handle_impact(impact: Impact):  ## Обработка эффектов
 	for effect in $Effects.get_children():
 		effect.on_impact(impact)
+		
+	for effect in impact.effects:
+		var eff = effect.duplicate()
+		eff.lifetime = effect.lifetime
+		$Effects.add_child(eff)
 	
+	handle_damage(impact.damage)
+
+
+
+func handle_damage(damage: int):
 	if hp > 0:
-		hp -= impact.damage
+		hp -= damage
 		if hp <= 0:
 			state.dying()
 			queue_free()
-
-	for effect in impact.effects:
-		$Effects.add_child(effect)

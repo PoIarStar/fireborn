@@ -5,8 +5,6 @@
 
 [node name="Player" instance=ExtResource("1_g0u1p")]
 motion_mode = 1
-platform_floor_layers = 4294967041
-platform_wall_layers = 2
 script = ExtResource("2_lr2p1")
 speed = 2000
 

@@ -12,12 +12,17 @@ func attack(target: Vector2):  ## Функция атаки. Применяет 
 	if can_attack():
 		var weapon: Weapon = inventory.active_cell.duplicate()  # чтобы не менять характеристики оружия
 		
-		for effect: Effect in effects:
+		for effect: Effect in $Effects.get_children():
 			effect.modify_weapon(weapon)
 		
 		var attack: AttackEntity = weapon.get_attack()
 		attack.position = self.position
-		self.level.add_child(attack)
+		self.get_parent().add_child(attack)
 		attack.activate(self, target.normalized())
 		$WeaponCooldownTimer.start(inventory.active_cell.cooldown)
 	
+
+func behaviour_player() -> void:
+	super.behaviour_player()
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		attack(get_global_mouse_position() - self.global_position)

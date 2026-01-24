@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Fireborn"
-run/main_scene="uid://c5p7yquqkd1ef"
+run/main_scene="uid://cfkfljywwofov"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Fireborn"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/Flat/godot-projects/fb-test-24-01-26.avi"
 
 [input]
 

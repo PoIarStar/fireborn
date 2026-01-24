@@ -1,7 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8ppibanuhdv"]
+[gd_scene load_steps=5 format=3 uid="uid://c8ppibanuhdv"]
 
 [ext_resource type="PackedScene" uid="uid://cnmdhe1b5g437" path="res://core/entities/creatures/creature.tscn" id="1_3t00j"]
 [ext_resource type="Script" uid="uid://c6dfhcc5necb3" path="res://Test/gopher.gd" id="2_h4opi"]
+[ext_resource type="Texture2D" uid="uid://cld7p87hqh1uo" path="res://i.webp" id="3_h4opi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exsxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_h4opi")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Gopher" instance=ExtResource("1_3t00j")]
 script = ExtResource("2_h4opi")
+max_hp = 20
+
+[node name="anims" parent="." index="2"]
+position = Vector2(1, 1)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_exsxy")
+animation = &"new_animation"
+metadata/_edit_group_ = true
