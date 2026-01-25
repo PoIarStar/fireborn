@@ -11,14 +11,16 @@ script = ExtResource("1_x25rp")
 [node name="Gophery" parent="." index="3" instance=ExtResource("3_gmgay")]
 position = Vector2(246, -175)
 
-[node name="Gophery2" parent="." index="4" instance=ExtResource("3_gmgay")]
-position = Vector2(170, 205)
-
-[node name="Gophery3" parent="." index="5" instance=ExtResource("3_gmgay")]
-position = Vector2(-259, -80)
-
-[node name="Archer" parent="." index="6" instance=ExtResource("4_w7r7j")]
+[node name="Archer" parent="." index="4" instance=ExtResource("4_w7r7j")]
 platform_floor_layers = 4294967041
 platform_wall_layers = 2
+max_mana = 0
+armor = 0
 team = 2
 control_type = 0
+
+[node name="Gophery2" parent="." index="5" instance=ExtResource("3_gmgay")]
+position = Vector2(170, 205)
+
+[node name="Gophery3" parent="." index="6" instance=ExtResource("3_gmgay")]
+position = Vector2(-259, -80)

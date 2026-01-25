@@ -11,6 +11,8 @@ script = ExtResource("1_3gp33")
 [node name="Tick" type="Timer" parent="."]
 autostart = true
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="floor" type="TileMapLayer" parent="."]
+
+[node name="walls" type="TileMapLayer" parent="."]
 
 [connection signal="timeout" from="Tick" to="." method="_on_tick_timeout"]

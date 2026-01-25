@@ -11,7 +11,7 @@ var attacker: Fighter  ## Атакующий - боец, создатель ат
 var direction: Vector2  ## Направление атаки
 
 
-func activate(attacker: Player, direction: Vector2) -> void:  ## Активирует атаку: задаёт направление и запускает таймер существования
+func activate(attacker: Creature, direction: Vector2) -> void:  ## Активирует атаку: задаёт направление и запускает таймер существования
 	set_team(attacker.team)
 	self.attacker = attacker
 	self.direction = direction

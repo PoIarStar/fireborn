@@ -5,4 +5,9 @@
 
 [node name="Mage" instance=ExtResource("1_sqwww")]
 script = ExtResource("2_fiwbx")
-max_mana = 0
+max_mana = null
+armor = null
+max_hp = null
+speed = null
+team = null
+control_type = null

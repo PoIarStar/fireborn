@@ -5,3 +5,4 @@
 
 [node name="Character" instance=ExtResource("1_524la")]
 script = ExtResource("2_1sa8s")
+max_mana = null

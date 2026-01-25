@@ -1,7 +1,7 @@
 class_name Level
 extends Node2D
 
-var player: Player
+var player: Creature
 var global_time: int
 var cursor: Entity
 

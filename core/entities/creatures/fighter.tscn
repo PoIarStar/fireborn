@@ -6,6 +6,11 @@
 [node name="Fighter" instance=ExtResource("1_h5upm")]
 motion_mode = 0
 script = ExtResource("2_5ky5n")
+armor = null
+max_hp = null
+speed = null
+team = null
+control_type = null
 
 [node name="WeaponCooldownTimer" type="Timer" parent="." index="3"]
 one_shot = true

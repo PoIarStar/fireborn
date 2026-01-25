@@ -1,12 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1v0fvl2xqbws"]
+[gd_scene load_steps=3 format=3 uid="uid://ueemd0w82sxt"]
 
 [ext_resource type="PackedScene" uid="uid://bungu3q7f1t5x" path="res://core/entities/creatures/character.tscn" id="1_g0u1p"]
-[ext_resource type="Script" uid="uid://nqj2cdr5dvlv" path="res://core/entities/creatures/player.gd" id="2_lr2p1"]
+
+[sub_resource type="GDScript" id="GDScript_w3bja"]
+script/source = "extends Character
+class_name Player
+
+## Игрок. Управляется человеком
+
+
+func _init() -> void:
+	team = Teams.PLAYER
+	speed = 200
+	
+"
 
 [node name="Player" instance=ExtResource("1_g0u1p")]
 motion_mode = 1
-script = ExtResource("2_lr2p1")
+script = SubResource("GDScript_w3bja")
+max_mana = 0
+armor = 0
+max_hp = -1
 speed = 2000
+team = 0
+control_type = 1
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
+[node name="Camera2D" parent="." index="5"]
+visible = true
 zoom = Vector2(0.5, 0.5)
