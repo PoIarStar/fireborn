@@ -1,18 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://hh64wnmlocil"]
+[gd_scene format=3 uid="uid://hh64wnmlocil"]
 
 [ext_resource type="Script" uid="uid://c5awc47kd7vfc" path="res://core/level.gd" id="1_3gp33"]
 [ext_resource type="PackedScene" uid="uid://c1pllsmgwhfjm" path="res://core/debug/debugger.tscn" id="2_qy6ut"]
 
-[node name="Level" type="Node2D"]
+[sub_resource type="TileSet" id="TileSet_3gp33"]
+
+[node name="Level" type="Node2D" unique_id=307707877]
 script = ExtResource("1_3gp33")
 
-[node name="Debugger" parent="." instance=ExtResource("2_qy6ut")]
+[node name="Debugger" parent="." unique_id=1397652903 instance=ExtResource("2_qy6ut")]
 
-[node name="Tick" type="Timer" parent="."]
+[node name="Tick" type="Timer" parent="." unique_id=174383845]
 autostart = true
 
-[node name="floor" type="TileMapLayer" parent="."]
+[node name="Floor" type="TileMapLayer" parent="." unique_id=53249922]
+tile_set = SubResource("TileSet_3gp33")
 
-[node name="walls" type="TileMapLayer" parent="."]
+[node name="Walls" type="TileMapLayer" parent="." unique_id=2073132097]
 
 [connection signal="timeout" from="Tick" to="." method="_on_tick_timeout"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxf6t0hyb23xy"]
+[gd_scene format=3 uid="uid://bxf6t0hyb23xy"]
 
 [ext_resource type="PackedScene" uid="uid://ueemd0w82sxt" path="res://core/entities/creatures/player.tscn" id="1_mdiga"]
 [ext_resource type="Script" uid="uid://obnebat4tu7" path="res://Test/archer.gd" id="2_37754"]
-[ext_resource type="Texture2D" uid="uid://bagn8rc2kxqxm" path="res://1806ee8501d5fd5a0721e020ba7f0a1b.jpg" id="3_fwkqc"]
+[ext_resource type="Texture2D" uid="uid://bagn8rc2kxqxm" path="res://Test/1806ee8501d5fd5a0721e020ba7f0a1b.jpg" id="3_fwkqc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b245p"]
 animations = [{
@@ -15,20 +15,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Archer" instance=ExtResource("1_mdiga")]
+[node name="Archer" unique_id=1436865884 instance=ExtResource("1_mdiga")]
 script = ExtResource("2_37754")
-max_mana = 0
-armor = 0
 max_hp = 20
-team = 0
-control_type = 1
+speed = 500
 
-[node name="anims" parent="." index="2"]
-scale = Vector2(0.248, 0.248)
+[node name="anims" parent="." index="2" unique_id=1110898686]
+scale = Vector2(0.063999996, 0.06400001)
 sprite_frames = SubResource("SpriteFrames_b245p")
 flip_h = true
 metadata/_edit_group_ = true
-
-[node name="Camera2D" parent="." index="5"]
-visible = true
-position = Vector2(0, 0)

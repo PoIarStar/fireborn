@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnmdhe1b5g437"]
+[gd_scene format=3 uid="uid://cnmdhe1b5g437"]
 
 [ext_resource type="PackedScene" uid="uid://bdvugkqdpnxc8" path="res://core/entities/Entity.tscn" id="1_3o8f6"]
 [ext_resource type="Script" uid="uid://c55kfka8lj1i7" path="res://core/entities/creatures/creature.gd" id="2_bhed1"]
 
-[node name="Creature" instance=ExtResource("1_3o8f6")]
+[node name="Creature" unique_id=1407266095 instance=ExtResource("1_3o8f6")]
 script = ExtResource("2_bhed1")
 armor = 0
 max_hp = -1
 
-[node name="Effects" type="Node" parent="." index="3"]
+[node name="Effects" type="Node" parent="." index="3" unique_id=619869842]
 
-[node name="Camera2D" type="Camera2D" parent="." index="4"]
+[node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=846780557]
 visible = false

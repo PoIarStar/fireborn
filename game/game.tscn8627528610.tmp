@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ck3kyg6sdyruw"]
+
+[ext_resource type="Script" uid="uid://c5dad4uc2coq0" path="res://game/game.gd" id="1_4fuuu"]
+[ext_resource type="PackedScene" uid="uid://dtgbnj1iwi24g" path="res://game/levels/test_level.tscn" id="1_e2o6t"]
+[ext_resource type="AudioStream" uid="uid://gfhibujf4sld" path="res://game/sounds/music/The Dead Coast.mp3" id="3_4fuuu"]
+[ext_resource type="PackedScene" uid="uid://c4k73ye3ikv74" path="res://game/gui/pause_menu.tscn" id="3_h7iqs"]
+
+[node name="Game" type="Node2D" unique_id=1720457633]
+script = ExtResource("1_4fuuu")
+
+[node name="TestLevel" parent="." unique_id=1640752628 instance=ExtResource("1_e2o6t")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2129722813]
+stream = ExtResource("3_4fuuu")
+parameters/looping = true
+
+[node name="PauseMenu" parent="." unique_id=447499728 instance=ExtResource("3_h7iqs")]
+visible = false

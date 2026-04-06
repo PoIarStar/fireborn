@@ -7,3 +7,4 @@ func _init() -> void:
 	
 	for i in get_children():
 		print(i)
+ 

@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c4k73ye3ikv74"]
+
+[ext_resource type="Script" uid="uid://cfhddq5q2yekj" path="res://game/gui/pause_menu.gd" id="1_ky5nh"]
+
+[node name="PauseMenu" type="Control" unique_id=447499728]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ky5nh")
+
+[node name="ButtonPlay" type="Button" parent="." unique_id=1923012051]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.20987654
+anchor_right = 0.6041667
+anchor_bottom = 0.2962963
+text = "Продолжить"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonSave" type="Button" parent="." unique_id=402527259]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.3580247
+anchor_right = 0.6041667
+anchor_bottom = 0.44444445
+text = "Сохранения"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonSettings" type="Button" parent="." unique_id=666648168]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.50617284
+anchor_right = 0.6041667
+anchor_bottom = 0.5925926
+text = "Настройки"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonMenu" type="Button" parent="." unique_id=1457809716]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.654321
+anchor_right = 0.6041667
+anchor_bottom = 0.7407407
+text = "Главное меню"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_menu_pressed"]

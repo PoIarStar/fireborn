@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c51ffih5j0nbo"]
+
+[ext_resource type="Script" uid="uid://t8330fsxs7xq" path="res://core/quests/quest_point.gd" id="1_kxbrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvc0h"]
+size = Vector2(32, 32)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kxbrc"]
+
+[node name="QuestPoint" type="Node2D" unique_id=1164745912]
+script = ExtResource("1_kxbrc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2045217539]
+collision_layer = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=957854420]
+shape = SubResource("RectangleShape2D_xvc0h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=445854288]
+modulate = Color(1, 1, 0.105882354, 0.38039216)
+position = Vector2(4.7683716e-07, 4.7683716e-07)
+scale = Vector2(31.999998, 31.999998)
+texture = SubResource("CanvasTexture_kxbrc")

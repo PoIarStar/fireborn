@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyrjk4emulm0"]
+[gd_scene format=3 uid="uid://dyrjk4emulm0"]
 
 [ext_resource type="PackedScene" uid="uid://dllqptvbpruut" path="res://Test/arrow.tscn" id="1_daike"]
 [ext_resource type="Script" uid="uid://cd6ikgfxonvf8" path="res://Test/fired_arrow.gd" id="2_q7yhn"]
 [ext_resource type="PackedScene" uid="uid://cu0fw2u6xdfum" path="res://Test/burning.tscn" id="3_q7yhn"]
-[ext_resource type="Texture2D" uid="uid://cn2nf0e1wkunm" path="res://fireballs.png" id="4_inprm"]
+[ext_resource type="Texture2D" uid="uid://cn2nf0e1wkunm" path="res://Test/fireballs.png" id="4_inprm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5dffe"]
 animations = [{
